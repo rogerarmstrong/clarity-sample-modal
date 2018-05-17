@@ -1,3 +1,6 @@
-<button (click)="modal.open('Hello From Parent!')" class="btn btn-primary">Open Modal</button>
+<div>First name: {{user.firstName}}</div>
+<div>Last name: {{user.lastName}}</div>
 
-<app-modal [btnText]="'Close'"></app-modal>
+<button (click)="modal.open(user)" class="btn btn-primary">Edit user</button>
+
+<app-modal></app-modal>
