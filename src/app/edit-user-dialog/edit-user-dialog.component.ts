@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChildren, ViewChild, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ViewChildren, ViewChild, AfterViewInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { User } from '../user';
 
 @Component({
