@@ -1,0 +1,12 @@
+<clr-modal [(clrModalOpen)]="show">
+    <div class="modal-title">Edit user</div>
+
+    <div class="modal-body">
+        <h5>{{ msg }}</h5>
+        <input type="text" #input_1 autofocus>
+    </div>
+
+    <div class="modal-footer">
+        <button (click)="close()" class="btn btn-primary">{{ btnText }}</button>
+    </div>
+</clr-modal>
