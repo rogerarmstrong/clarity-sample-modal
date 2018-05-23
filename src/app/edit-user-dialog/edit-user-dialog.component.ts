@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChildren, ViewChild, AfterViewInit, Outpu
 import { User } from '../user';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'edit-user-dialog',
   templateUrl: './edit-user-dialog.component.html',
   styleUrls: ['./edit-user-dialog.component.scss']
 })
