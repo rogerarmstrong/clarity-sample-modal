@@ -9,13 +9,15 @@ import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import { EditUserDialogComponent } from './edit-user-dialog/edit-user-dialog.component';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
         HomeComponent,
-        EditUserDialogComponent
+        EditUserDialogComponent,
+        AutofocusDirective
     ],
     imports: [
         BrowserAnimationsModule,

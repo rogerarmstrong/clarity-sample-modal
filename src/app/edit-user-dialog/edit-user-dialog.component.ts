@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChildren, ViewChild, AfterViewInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { User } from '../user';
+import { AutofocusDirective } from '../autofocus.directive';
 
 @Component({
   selector: 'edit-user-dialog',
@@ -7,7 +8,7 @@ import { User } from '../user';
   styleUrls: ['./edit-user-dialog.component.scss']
 })
 export class EditUserDialogComponent {
-  @ViewChild("autofocus") autofocus;
+  @ViewChild(AutofocusDirective) autofocus: AutofocusDirective;
   @Output() onOK: EventEmitter<User> = new EventEmitter<User>();
 
   show = false;
@@ -18,8 +19,10 @@ export class EditUserDialogComponent {
     this.show = true;
     this.user = Object.create(user); // clone the user (we don't want to modify the original in the dialog)
 
-    setTimeout(() => { // workaround for lack of dom ready event in angular
-      this.autofocus.nativeElement.select();
+    setTimeout(() => {
+      if (this.autofocus) {
+        this.autofocus.setFocus();
+      }
     }, 0.1);
   }
 
